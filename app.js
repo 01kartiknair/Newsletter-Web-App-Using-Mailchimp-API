@@ -31,9 +31,10 @@ app.post("/", function(req, res) {
   };
 
   const jsonData = JSON.stringify(data);
-
+//in the url after "/lists" we add the audience id or list id provided in the mailchimp account (for eg: https://us6.api.mailchimp.com/3.0/lists/13113) assuming listId is 13113
   const url = "https://us6.api.mailchimp.com/3.0/lists/listId";
 
+//enter your username and apikey in auth attribute (apikey can be created through the mailchimp account or you could use the default given by them if it's there)
   const options = {
     method: "POST",
     auth: "username:apiKey"
